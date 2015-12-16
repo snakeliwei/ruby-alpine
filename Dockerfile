@@ -6,8 +6,7 @@ RUN apk --update add \
     ca-certificates \
     ruby \
     ruby-bundler \
-    bash \
 # Clean APK cache
     && rm -rf /var/cache/apk/*
 
-CMD ["/bin/bash"]
+CMD ["/bin/sh"]

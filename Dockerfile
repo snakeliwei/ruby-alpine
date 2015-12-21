@@ -1,7 +1,7 @@
 From alpine:latest
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \
+ENV BUILD_PACKAGES="curl-dev ruby-dev build-base git" \
     DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev" \
     RUBY_PACKAGES="ruby ruby-io-console ruby-json yaml nodejs"
 

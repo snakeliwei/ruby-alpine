@@ -2,8 +2,8 @@ From alpine:latest
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
 ENV BUILD_PACKAGES="curl-dev ruby-dev build-base git" \
-    DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev imagemagick-dev libpq" \
-    RUBY_PACKAGES="ruby ruby-io-console ruby-json ruby-pg yaml nodejs"
+    DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev imagemagick-dev postgresql-dev" \
+    RUBY_PACKAGES="ruby ruby-io-console ruby-json yaml nodejs"
 
 RUN apk --update add $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
     find / -type f -iname \*.apk-new -delete && \

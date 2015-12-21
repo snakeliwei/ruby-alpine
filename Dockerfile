@@ -21,9 +21,4 @@ WORKDIR /tmp/env
 
 RUN /bin/bash -l -c "bundle install"
 
-# cleanup and settings
-    bundle config --global build.nokogiri  "--use-system-libraries" && \
-    bundle config --global build.nokogumbo "--use-system-libraries" && \
-    rm -rf /usr/lib/lib/ruby/gems/*/cache/* && \
-    rm -rf ~/.gem
 CMD ["irb"]

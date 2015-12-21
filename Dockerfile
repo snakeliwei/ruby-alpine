@@ -1,10 +1,9 @@
 From alpine:latest
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-
 ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \
     DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev" \
-    RUBY_PACKAGES="ruby ruby-io-console ruby-json yaml nodejs" \
+    RUBY_PACKAGES="ruby ruby-io-console ruby-json yaml nodejs"
 
 RUN apk --update --upgrade add $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
     find / -type f -iname \*.apk-new -delete && \

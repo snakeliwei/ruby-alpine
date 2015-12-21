@@ -1,7 +1,7 @@
 From alpine:latest
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV BUILD_PACKAGES="bash curl-dev build-base git gpgme" \
+ENV BUILD_PACKAGES="bash curl-dev build-base git gpgme tar" \
     DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev imagemagick-dev postgresql-dev" 
 
 RUN apk --update add $BUILD_PACKAGES $DEV_PACKAGES && \

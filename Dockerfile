@@ -9,11 +9,11 @@ RUN apk --update add $BUILD_PACKAGES $DEV_PACKAGES && \
     rm -rf /var/cache/apk/*
 
 RUN mkdir -p /tmp/src/ruby \
-    && curl -O https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.gz \
-    && tar -xzf ruby-2.1.0.tar.gz -C /tmp/src/ruby \
+    && curl -fSL -o ruby.tar.gz https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.gz \
+    && tar -xzf ruby.tar.gz -C /tmp/src/ruby --strip-components=1 \
     && cd /tmp/src/ruby \
-    && ./configure \
-    && make \
+    && ./configure --disable-install-doc \
+    && make -j"$nproc" \
     && make install \
     && rm -rf /tmp/src/ruby
 

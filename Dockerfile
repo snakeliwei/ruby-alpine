@@ -9,8 +9,8 @@ RUN apk --update add $BUILD_PACKAGES $DEV_PACKAGES && \
     rm -rf /var/cache/apk/*
 
 RUN mkdir -p /tmp/src/ruby \
-    && curl -O https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.bz2 \
-    && tar -xzf ruby-2.1.0.tar.bz2 -C /tmp/src/ruby \
+    && curl -O https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.gz \
+    && tar -xzf ruby-2.1.0.tar.gz -C /tmp/src/ruby \
     && cd /tmp/src/ruby \
     && ./configure \
     && make \

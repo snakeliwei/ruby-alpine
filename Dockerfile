@@ -1,4 +1,4 @@
-From alpine:latest
+From ruby:2.1-slim
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
 RUN apt-get update \

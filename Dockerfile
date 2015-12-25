@@ -5,9 +5,8 @@ ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \
     DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev sqlite-dev postgresql-dev mysql-dev" \
     RUBY_PACKAGES="ruby ruby-io-console ruby-json yaml nodejs" \
 
-RUN \
-  apk --update add $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
-  gem install -N bundler
+RUN apk --update add $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
+    gem install -N bundler
   
 RUN echo 'gem: --no-document' >> ~/.gemrc && \
     cp ~/.gemrc /etc/gemrc && \

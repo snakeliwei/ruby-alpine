@@ -1,4 +1,4 @@
-FROM alpine:lastest
+FROM alpine:3.2
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
 ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \

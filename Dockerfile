@@ -1,4 +1,4 @@
-FROM alpine:3.2
+FROM alpine:lastest
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
 ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \
@@ -11,8 +11,10 @@ RUN apk --update add $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
 RUN echo 'gem: --no-document' >> ~/.gemrc && \
     cp ~/.gemrc /etc/gemrc && \
     chmod uog+r /etc/gemrc && \
-    mkdir -p /app/gem 
+    mkdir -p /app/gem
+
 COPY . /app/gem
+
 RUN cd /app/gem && \
     bundle install && \
 # cleanup and settings

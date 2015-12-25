@@ -14,7 +14,7 @@ RUN echo 'gem: --no-document' >> ~/.gemrc && \
     chmod uog+r /etc/gemrc && \
     mkdir -p /app/gem 
 COPY . /app/gem
-RUN /app/gem && \
+RUN cd /app/gem && \
     bundle install && \
 # cleanup and settings
     find / -type f -iname \*.apk-new -delete && \

@@ -1,9 +1,9 @@
 FROM alpine:3.2
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV BUILD_PACKAGES="curl-dev ruby-dev build-base" \
+ENV BUILD_PACKAGES="git curl-dev build-base" \
     DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev postgresql-dev imagemagick-dev" \
-    RUBY_PACKAGES="ruby ruby-io-console ruby-json yaml nodejs"
+    RUBY_PACKAGES="ruby ruby-io-console ruby-dev ruby-json yaml nodejs"
 
 RUN apk add --update $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
     gem install -N bundler

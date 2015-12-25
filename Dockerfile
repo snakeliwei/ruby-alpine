@@ -41,8 +41,6 @@ RUN cd /app/gem && \
 # cleanup and settings
     find / -type f -iname \*.apk-new -delete && \
     rm -rf /var/cache/apk/* && \
-    rm -rf /usr/lib/lib/ruby/gems/*/cache/* && \
-    rm -rf ~/.gem && \
     rm -rf /app/*
     
 WORKDIR /app

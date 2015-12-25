@@ -6,7 +6,7 @@ ENV BUILD_PACKAGES="git curl-dev build-base" \
     RUBY_PACKAGES="ruby ruby-io-console ruby-dev ruby-json yaml nodejs"
 
 RUN apk add --update $BUILD_PACKAGES $RUBY_PACKAGES $DEV_PACKAGES && \
-    gem install -N bundler
+    gem install bundler
   
 RUN echo 'gem: --no-document' >> ~/.gemrc && \
     cp ~/.gemrc /etc/gemrc && \

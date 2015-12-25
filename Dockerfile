@@ -4,7 +4,7 @@ MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 ENV BUILD_PACKAGES="bash tar git curl-dev build-base yaml gpgme" \
     DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev postgresql-dev imagemagick-dev mysql-dev"
 
-RUN apk add --update $BUILD_PACKAGES $DEV_PACKAGES \
+RUN apk add --update $BUILD_PACKAGES $DEV_PACKAGES
 
 ENV RUBY_VERSION 2.1.0
 

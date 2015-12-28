@@ -1,24 +1,16 @@
 FROM alpine:3.2
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV BUILD_PACKAGES="bash tar git curl-dev build-base yaml gpgme" \
-    DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev tzdata yaml-dev postgresql-dev imagemagick-dev mysql-dev"
+ENV BUILD_PACKAGES="git curl-dev" \
+    DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev yaml-dev postgresql-dev imagemagick-dev"
+    RUBY_PACKAGES="ruby ruby-dev"
 
-RUN apk add --update $BUILD_PACKAGES $DEV_PACKAGES
+RUN apk add --update $BUILD_PACKAGES $DEV_PACKAGES $RUBY_PACKAGES
 
-ENV RUBY_VERSION 2.1.0
 
 # Install RVM, RUBY, bundler 
-RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 \
-     && \curl -sSL https://get.rvm.io | bash -s stable \
-     && /bin/bash -l -c "source /usr/local/rvm/scripts/rvm" \
-     && /bin/bash -l -c "export PATH=$PATH:/usr/local/rvm/scripts/rvm" \
-     && /bin/bash -l -c "rvm requirements" \ 
-     && /bin/bash -l -c "rvm install $RUBY_VERSION" \ 
-     && /bin/bash -l -c "rvm use $RUBY_VERSION --default" \ 
-     && /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
-
-RUN mkdir -p /app/gem 
+RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc" \
+    && mkdir -p /app/gem 
 COPY . /app/gem 
 WORKDIR /app/gem
 RUN /bin/bash -l -c "bundle install" \

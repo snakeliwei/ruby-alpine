@@ -9,11 +9,11 @@ RUN apk add --update $BUILD_PACKAGES $DEV_PACKAGES $RUBY_PACKAGES
 
 
 # Install RVM, RUBY, bundler 
-RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc" \
+RUN gem install bundler \
     && mkdir -p /app/gem 
 COPY . /app/gem 
 WORKDIR /app/gem
-RUN /bin/bash -l -c "bundle install" \
+RUN bundle install \
 
 # cleanup and settings
     && find / -type f -iname \*.apk-new -delete \

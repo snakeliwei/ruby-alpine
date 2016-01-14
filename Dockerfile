@@ -1,7 +1,7 @@
 FROM alpine
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV BUILD_PACKAGES="git curl-dev nodejs" \
+ENV BUILD_PACKAGES="build-base make git curl-dev nodejs" \
     DEV_PACKAGES="zlib-dev libxml2-dev libxslt-dev yaml-dev gmp-dev postgresql-dev imagemagick-dev" \
     RUBY_PACKAGES="ruby ruby-dev ruby-io-console ruby-bundler"
 

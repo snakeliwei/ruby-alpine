@@ -6,6 +6,8 @@ ENV BUILD_PACKAGES="build-base make git curl-dev nodejs gcc g++ bison gawk bash 
 
 RUN apk add --update $BUILD_PACKAGES $DEV_PACKAGES
 
+RUN chsh -s /bin/bash
+
 # Install RVM, RUBY, bundler 
 ENV RUBY_VERSION 2.1.0
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 \

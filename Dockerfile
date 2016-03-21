@@ -10,6 +10,7 @@ RUN apk add --update $BUILD_PACKAGES $DEV_PACKAGES
 ENV RUBY_VERSION 2.1.0
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 \
     && \curl -sSL https://get.rvm.io | bash -s stable \
+    && /bin/bash -l -c "source /etc/profile.d/rvm.sh" \
     && /bin/bash -l -c "rvm requirements" \ 
     && /bin/bash -l -c "rvm install $RUBY_VERSION" \ 
     && /bin/bash -l -c "rvm use $RUBY_VERSION --default" \ 

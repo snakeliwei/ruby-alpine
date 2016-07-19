@@ -1,11 +1,11 @@
 FROM ruby:2.1-alpine
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV BUILD_PACKAGES="gcc make git curl-dev nodejs gcc g++ bison gawk gpgme tar procps linux-headers" \
+ENV BUILD_PACKAGES="build-base libgcrypt-dev gcc make git curl-dev nodejs bison gawk gpgme tar procps linux-headers" \
     DEV_PACKAGES="openssl-dev libc-dev zlib-dev libxml2-dev libxslt-dev yaml-dev gmp-dev postgresql-dev imagemagick-dev readline-dev libffi-dev gdbm-dev"
 
     
-RUN apk add --no-cache $BUILD_PACKAGES $DEV_PACKAGES
+RUN apk add --update --no-cache $BUILD_PACKAGES $DEV_PACKAGES
 
 COPY . /app/gem 
 WORKDIR /app/gem

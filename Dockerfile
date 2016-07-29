@@ -9,6 +9,7 @@ RUN apk add --update --no-cache $BUILD_PACKAGES $DEV_PACKAGES && \
 
 COPY . /temp 
 RUN cd /temp && \
+    bundle config build.nokogiri --use-system-libraries && \
     bundle install && \
 
 # cleanup and settings

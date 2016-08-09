@@ -1,0 +1,72 @@
+# source 'https://ruby.taobao.org'
+source 'https://gems.ruby-china.org'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.2.6'
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 1.2'
+
+gem 'pg'
+gem 'thin'
+gem 'will_paginate'
+gem 'state_machines-activerecord'
+gem 'oneapm_rpm'
+gem 'qiniu'
+gem 'httparty'
+gem 'acts_as_list'
+gem 'connection_pool'
+gem 'redis-objects'
+gem 'cancancan', '~> 1.10'
+gem 'rack-cors', require: 'rack/cors'
+gem "settingslogic", "~> 2.0.6"
+gem 'elasticsearch-model'
+
+# send exception notification to mail
+gem 'exception_notification'
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'quiet_assets'
+  # gem 'rack-mini-profiler'
+  gem 'brakeman', :require => false
+end
+# Use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.1.2'
+
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'simplecov'
+  gem 'vcr'
+  gem 'spork' #加上这个gem, 覆盖率才能覆盖API接口 https://github.com/sporkrb/spork
+end
+
+group :test do
+  gem 'webmock'
+  gem 'rspec-sidekiq'
+end
+
+gem 'grape', "~> 0.9.0"
+gem 'grape-entity',">=0.4.6"# Use ActiveModel has_secure_password
+
+gem 'sidekiq'
+gem 'sinatra', '>= 1.3.0', require: false
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use unicorn as the app server
+gem 'unicorn'
+# gem 'oneapm_rpm'
+gem 'uglifier'
+# gem 'rollbar', '~> 2.8.3'
+
+# Use Capistrano for deployment
+# gem 'capistrano', group: :development
+
+# Use debugger
+# gem 'debugger', group: [:development, :test]

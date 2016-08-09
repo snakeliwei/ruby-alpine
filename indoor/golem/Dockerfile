@@ -10,9 +10,9 @@ RUN apk add --update --no-cache $BUILD_PACKAGES $DEV_PACKAGES && \
 # Add s6-overlay
 ADD https://github.com/just-containers/s6-overlay/releases/download/v$S6_OVERLAY_VERSION/s6-overlay-amd64.tar.gz /temp/
 
-COPY . /temp
+COPY Gem* /temp
 RUN cd /temp  && \
-#    bundle config build.nokogiri --use-system-libraries && \
+    bundle config build.nokogiri --use-system-libraries && \
     bundle install && \
     tar xzf /temp/s6-overlay-amd64.tar.gz -C / &&\
     rm -rf /var/cache/apk/* && \

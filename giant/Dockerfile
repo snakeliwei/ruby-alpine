@@ -32,6 +32,8 @@ RUN cd /temp \
         yaml-dev \
         procps \
         zlib-dev \
+        nodejs \
+        vim \
     && apk del .build-deps \
     && rm -rf /var/cache/apk/* \
     && rm -rf /temp

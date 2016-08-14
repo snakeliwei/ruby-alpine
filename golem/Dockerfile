@@ -4,7 +4,7 @@ MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 ENV S6_OVERLAY_VERSION 1.18.1.3
 
 RUN apk add --no-cache --virtual .build-deps \
-    build-base libgcrypt-dev gcc make git curl-dev nodejs bison gawk gpgme tar procps linux-headers \
+    build-base libgcrypt-dev gcc make git curl-dev nodejs bison gawk gpgme tar vim procps linux-headers \
     ruby-dev ruby-libs openssl-dev libc-dev zlib-dev libxml2-dev libxslt-dev yaml-dev gmp-dev \
     postgresql-dev imagemagick-dev readline-dev libffi-dev gdbm-dev && \
     mkdir /temp

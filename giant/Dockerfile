@@ -39,4 +39,5 @@ RUN cd /temp \
     && rm -rf /var/cache/apk/* \
     && rm -rf /temp
 
+
 ENTRYPOINT ["/init"]

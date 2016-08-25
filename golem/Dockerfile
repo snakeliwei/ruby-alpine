@@ -17,26 +17,26 @@ RUN cd /temp \
     && bundle config build.nokogiri --use-system-libraries \
     && bundle install \
     && tar xzf /temp/s6-overlay-amd64.tar.gz -C / \
-    && runDeps="$( \
-        scanelf --needed --nobanner --recursive /usr/local \
-            | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }' \
-            | sort -u \
-            | xargs -r apk info --installed \
-            | sort -u \
-    )" \
-    && apk add --virtual .ruby-rundeps $runDeps \
-        bzip2 \
-        ca-certificates \
-        curl \
-        libffi-dev \
-        openssl-dev \
-        yaml-dev \
-        procps \
-        zlib-dev \
-        nodejs \
-        vim \
-        bash \
-    && apk del .build-deps \
+    # && runDeps="$( \
+    #     scanelf --needed --nobanner --recursive /usr/local \
+    #         | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }' \
+    #         | sort -u \
+    #         | xargs -r apk info --installed \
+    #         | sort -u \
+    # )" \
+    # && apk add --virtual .ruby-rundeps $runDeps \
+    #     bzip2 \
+    #     ca-certificates \
+    #     curl \
+    #     libffi-dev \
+    #     openssl-dev \
+    #     yaml-dev \
+    #     procps \
+    #     zlib-dev \
+    #     nodejs \
+    #     vim \
+    #     bash \
+    # && apk del .build-deps \
     && rm -rf /var/cache/apk/* \
     && rm -rf /temp
 

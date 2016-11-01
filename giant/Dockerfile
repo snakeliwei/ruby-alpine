@@ -1,4 +1,4 @@
-FROM ruby:2.1-alpine
+FROM ruby:2.3.1-alpine
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
 ENV S6_OVERLAY_VERSION 1.18.1.5

@@ -8,12 +8,12 @@ gem 'rails', '4.2.6'
 # gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+# gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+# gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -40,19 +40,19 @@ gem 'sinatra', '>= 1.3.0', require: false
 gem 'mini_magick','3.3', require: false
 gem 'will_paginate'
 gem 'cancan'
-gem 'breadcrumbs_on_rails'
+# gem 'breadcrumbs_on_rails'
 gem 'acts_as_tree'
 gem 'acts_as_list'
 gem 'simple_form', '~> 3.0.1'
 gem 'state_machines-activerecord'
 gem 'easy_captcha'
-gem 'carrierwave'
+# gem 'carrierwave'
 gem 'vestal_versions', :git => 'git://github.com/laserlemon/vestal_versions'
-gem "themes_on_rails"
-gem 'angular-rails-templates'
-gem 'angular_rails_csrf'
+# gem "themes_on_rails"
+# gem 'angular-rails-templates'
+# gem 'angular_rails_csrf'
 gem 'ruby-pinyin'
-gem 'ruby-hmac'
+# gem 'ruby-hmac'
 gem 'qiniu', '~> 6.5.1'
 gem 'eager_group'
 gem 'whenever', :require => false
@@ -65,11 +65,11 @@ gem 'elasticsearch-model'
 
 gem 'rest-client'
 
-gem 'haml'
-gem 'hamlbars', '~> 2.1'
+# gem 'haml'
+# gem 'hamlbars', '~> 2.1'
 
-gem 'gon'
-gem 'handlebars_assets'
+# gem 'gon'
+# gem 'handlebars_assets'
 
 gem 'slim-rails'
 
@@ -78,18 +78,18 @@ gem 'omniauth-qq-connect'
 gem 'omniauth-wechat-oauth2'
 
 # gem 'newrelic_rpm'
-gem 'oneapm_rpm'
+# gem 'oneapm_rpm'
 
 #前端验证
 # gem 'client_side_validations', github: 'bcardarella/client_side_validations', branch: '4-0-beta'
 # gem 'client_side_validations-simple_form', github: 'saveritemedical/client_side_validations-simple_form'
 
-gem "switch_user", github: 'anke1460/switch_user'
+# gem "switch_user", github: 'anke1460/switch_user'
 
 # YAML 配置信息
 gem "settingslogic", "~> 2.0.6"
 
-gem 'exception_notification'
+# gem 'exception_notification'
 
 gem 'rack-cors', require: 'rack/cors'
 
@@ -118,8 +118,8 @@ end
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 group :test, :development do
-  gem 'rspec-rails', '~> 2.14.2'
-  gem "factory_girl_rails", "~> 4.0"
+  gem 'rspec-rails'
+  gem "factory_girl_rails"
   gem 'simplecov'
   gem 'vcr'
   # gem 'simplecov', :path => "/Users/wutao/ws/simplecov"
@@ -137,9 +137,9 @@ gem 'grape-entity'
 gem 'unicorn'
 
 # scrap
-gem 'nokogiri'
-gem 'curb'
-gem 'iconv'
+# gem 'nokogiri'
+# gem 'curb'
+# gem 'iconv'
 # gem 'stackprof'
 
 # Use debugger

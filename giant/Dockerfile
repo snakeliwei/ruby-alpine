@@ -17,7 +17,7 @@ RUN cd /temp \
     && bundle config build.nokogiri --use-system-libraries \
     && bundle install \
     && tar xzf /temp/s6-overlay-amd64.tar.gz -C / \
-    && apk del tzdata
+    && apk del tzdata \
     && rm -rf /var/cache/apk/* \
     && rm -rf /temp
 

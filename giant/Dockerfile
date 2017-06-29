@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyun.com/lyndon/alpineruby:base
+FROM snakeliwei/ruby-alpine:base
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
 ENV S6_OVERLAY_VERSION 1.19.1.1  

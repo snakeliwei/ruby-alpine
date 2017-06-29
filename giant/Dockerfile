@@ -5,7 +5,7 @@ ENV S6_OVERLAY_VERSION 1.19.1.1
 
 RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
     apk add --no-cache --update \
-    build-base libgcrypt-dev gcc make git curl-dev "nodejs@edge" bison gawk gpgme tar nano bash procps tzdata linux-headers \
+    gcc make git curl-dev "nodejs@edge" bison gawk gpgme tar nano bash procps tzdata linux-headers \
     ruby-dev ruby-libs openssl-dev libc-dev zlib-dev libxml2-dev libxslt-dev yaml-dev gmp-dev \
     postgresql-dev imagemagick-dev readline-dev libffi-dev gdbm-dev && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \

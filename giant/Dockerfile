@@ -4,7 +4,7 @@ MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 ENV S6_OVERLAY_VERSION 1.19.1.1  
     
 RUN apk add --no-cache \
-    build-base libgcrypt-dev gcc make git curl-dev nodejs bison gawk gpgme tar vim bash tzdata procps linux-headers \
+    gcc make git curl-dev nodejs bison gawk gpgme tar vim bash tzdata procps linux-headers \
     ruby-dev ruby-libs libc-dev zlib-dev libxml2-dev libxslt-dev yaml-dev gmp-dev \
     postgresql-dev imagemagick-dev readline-dev libffi-dev gdbm-dev && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \

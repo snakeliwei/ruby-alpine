@@ -1,13 +1,12 @@
-FROM ruby:2.3-alpine
+FROM registry.cn-hangzhou.aliyun.com/lyndon/alpineruby:base
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV S6_OVERLAY_VERSION 1.19.1.1
-
-RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
-    apk add --no-cache --update \
-    gcc make git curl-dev "nodejs@edge" bison gawk gpgme tar nano bash tzdata linux-headers \
-    ruby-dev ruby-libs openssl-dev libc-dev zlib-dev libxml2-dev libxslt-dev yaml-dev \
-    postgresql-dev imagemagick-dev readline-dev libffi-dev && \
+ENV S6_OVERLAY_VERSION 1.19.1.1  
+    
+RUN apk add --no-cache --update \
+    build-base libgcrypt-dev gcc make git curl-dev nodejs bison gawk gpgme tar vim bash tzdata procps linux-headers \
+    ruby-dev ruby-libs openssl-dev libc-dev zlib-dev libxml2-dev libxslt-dev yaml-dev gmp-dev \
+    postgresql-dev imagemagick-dev readline-dev libffi-dev gdbm-dev && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     mkdir /temp
 # Add s6-overlay

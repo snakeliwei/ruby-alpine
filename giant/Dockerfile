@@ -1,7 +1,7 @@
 FROM ruby:2.3-alpine
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
-ENV S6_OVERLAY_VERSION 1.19.1.1  
+ENV S6_OVERLAY_VERSION 1.20.0.0  
     
 RUN apk add --no-cache \
     build-base libgcrypt-dev gcc make git curl-dev nodejs bison gawk gpgme tar vim bash tzdata procps linux-headers \

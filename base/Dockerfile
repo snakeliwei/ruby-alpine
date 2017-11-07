@@ -8,3 +8,4 @@ RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/reposito
     postgresql-dev imagemagick-dev readline-dev libffi-dev gdbm-dev && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     mkdir -p /app
+

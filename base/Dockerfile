@@ -1,4 +1,4 @@
-FROM ruby:2.4-alpine
+FROM ruby:alpine3.6
 MAINTAINER Lyndon Li <snakeliwei@gmail.com>
 
 RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories  && \

@@ -1,5 +1,5 @@
 FROM ruby:2.4-alpine
-MAINTAINER Lyndon Li <snakeliwei@gmail.com>
+LABEL Author="Lyndon"
 
 RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories  && \
     apk add --no-cache --update \

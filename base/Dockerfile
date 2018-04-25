@@ -1,5 +1,5 @@
 FROM ruby:2.4-alpine
-LABEL Author="Lyndon"
+LABEL Author="Lyndon.li"
 
 RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories  && \
     apk add --no-cache --update \

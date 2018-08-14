@@ -1,9 +1,8 @@
-FROM ruby:2.4-alpine
+FROM ruby:2.4-alpine3.7
 LABEL Author="Lyndon.li"
 
-RUN echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories  && \
-    apk add --no-cache --update \
-    build-base python libgcrypt-dev gcc make git libc6-compat@edge curl nodejs@edge libuv@edge nodejs-npm@edge bison gawk gpgme tar nano bash procps tzdata linux-headers openssh-client \
+RUN apk add --no-cache --update \
+    build-base python libgcrypt-dev gcc make git libc6-compat curl nodejs libuv nodejs-npm bison gawk gpgme tar nano bash procps tzdata linux-headers openssh-client \
     ruby-dev ruby-libs libc-dev zlib-dev libxml2-dev libxslt-dev yaml-dev gmp-dev \
     postgresql-dev imagemagick-dev readline-dev libffi-dev gdbm-dev && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
